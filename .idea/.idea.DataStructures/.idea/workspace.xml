@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="42af5607-0178-4c52-9949-c8d9b87008a1" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/AssignmentOne/check_brackets.cs" afterPath="$PROJECT_DIR$/AssignmentOne/CheckBrackets.cs" />
+    <list default="true" id="42af5607-0178-4c52-9949-c8d9b87008a1" name="Default" comment="Added missed files">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.idea.DataStructures/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/.idea.DataStructures/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Tests/CheckBracketsTest.cs" afterPath="$PROJECT_DIR$/Tests/CheckBracketsTest.cs" />
     </list>
@@ -41,7 +40,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CheckBrackets.cs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CheckBrackets.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AssignmentOne/CheckBrackets.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="278">
@@ -93,20 +92,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CheckBracketsTest.cs" pinned="false" current-in-tab="false">
+      <file leaf-file-name="CheckBracketsTest.cs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Tests/CheckBracketsTest.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-51">
-              <caret line="9" column="14" lean-forward="false" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
-              <folding>
-                <marker date="1505663180000" expanded="true" signature="6:88" ph="..." />
-                <marker date="1505663180000" expanded="true" signature="105:1070" ph="{...}" />
-                <marker date="1505663180000" expanded="true" signature="142:1062" ph="{...}" />
-                <marker date="1505663180000" expanded="true" signature="195:592" ph="{...}" />
-                <marker date="1505663180000" expanded="true" signature="709:793" ph="{...}" />
-                <marker date="1505663180000" expanded="true" signature="859:1056" ph="{...}" />
-                <marker date="1505663180000" expanded="true" signature="885:1046" ph="{...}" />
-              </folding>
+            <state relative-caret-position="105">
+              <caret line="7" column="34" lean-forward="true" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="34" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -399,7 +390,7 @@
       <workItem from="1505601972955" duration="3315000" />
       <workItem from="1505634782231" duration="2571000" />
       <workItem from="1505637393239" duration="6473000" />
-      <workItem from="1505655299413" duration="7445000" />
+      <workItem from="1505655299413" duration="7640000" />
     </task>
     <task id="LOCAL-00001" summary="Updated tests to process each test data from data sets as individual test, Complete Assignment 1">
       <created>1505663126523</created>
@@ -408,11 +399,18 @@
       <option name="project" value="LOCAL" />
       <updated>1505663126523</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Renamed the Assignmbnet class because I can not submit the solution to Coursera without subscription so there's no sense to keep another name convension">
+      <created>1505663306168</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1505663306169</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19804000" />
+    <option name="totallyTimeSpent" value="19999000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -432,7 +430,7 @@
       <window_info id="Unit Tests" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31935883" sideWeight="0.49442896" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3292232" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17266187" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17262639" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="NuGet" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2482066" sideWeight="0.48550725" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -457,7 +455,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Updated tests to process each test data from data sets as individual test, Complete Assignment 1" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated tests to process each test data from data sets as individual test, Complete Assignment 1" />
+    <MESSAGE value="Renamed the Assignmbnet class because I can not submit the solution to Coursera without subscription so there's no sense to keep another name convension" />
+    <option name="LAST_COMMIT_MESSAGE" value="Renamed the Assignmbnet class because I can not submit the solution to Coursera without subscription so there's no sense to keep another name convension" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -547,15 +546,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="12" column="27" lean-forward="false" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
-          <folding>
-            <marker date="1505663180000" expanded="true" signature="6:88" ph="..." />
-            <marker date="1505663180000" expanded="true" signature="105:1070" ph="{...}" />
-            <marker date="1505663180000" expanded="true" signature="142:1062" ph="{...}" />
-            <marker date="1505663180000" expanded="true" signature="195:592" ph="{...}" />
-            <marker date="1505663180000" expanded="true" signature="709:793" ph="{...}" />
-            <marker date="1505663180000" expanded="true" signature="859:1056" ph="{...}" />
-            <marker date="1505663180000" expanded="true" signature="885:1046" ph="{...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -692,15 +683,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" column="5" lean-forward="true" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
-          <folding>
-            <marker date="1505663180000" expanded="true" signature="6:88" ph="..." />
-            <marker date="1505663180000" expanded="true" signature="105:1070" ph="{...}" />
-            <marker date="1505663180000" expanded="true" signature="142:1062" ph="{...}" />
-            <marker date="1505663180000" expanded="true" signature="195:592" ph="{...}" />
-            <marker date="1505663180000" expanded="true" signature="709:793" ph="{...}" />
-            <marker date="1505663180000" expanded="true" signature="859:1056" ph="{...}" />
-            <marker date="1505663180000" expanded="true" signature="885:1046" ph="{...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -799,15 +782,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="11" column="30" lean-forward="false" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="30" />
-          <folding>
-            <marker date="1505663180000" expanded="true" signature="6:88" ph="..." />
-            <marker date="1505663180000" expanded="true" signature="105:1070" ph="{...}" />
-            <marker date="1505663180000" expanded="true" signature="142:1062" ph="{...}" />
-            <marker date="1505663180000" expanded="true" signature="195:592" ph="{...}" />
-            <marker date="1505663180000" expanded="true" signature="709:793" ph="{...}" />
-            <marker date="1505663180000" expanded="true" signature="859:1056" ph="{...}" />
-            <marker date="1505663180000" expanded="true" signature="885:1046" ph="{...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -962,22 +937,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/CheckBracketsTest.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-51">
-          <caret line="9" column="14" lean-forward="false" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
-          <folding>
-            <marker date="1505663180000" expanded="true" signature="6:88" ph="..." />
-            <marker date="1505663180000" expanded="true" signature="105:1070" ph="{...}" />
-            <marker date="1505663180000" expanded="true" signature="142:1062" ph="{...}" />
-            <marker date="1505663180000" expanded="true" signature="195:592" ph="{...}" />
-            <marker date="1505663180000" expanded="true" signature="709:793" ph="{...}" />
-            <marker date="1505663180000" expanded="true" signature="859:1056" ph="{...}" />
-            <marker date="1505663180000" expanded="true" signature="885:1046" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/AssignmentOne/CheckBrackets.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="278">
@@ -1025,6 +984,14 @@
             <marker date="1505663180000" expanded="true" signature="4677:4735" ph="{...}" />
             <marker date="1505663180000" expanded="true" signature="4752:4815" ph="{...}" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/CheckBracketsTest.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="34" lean-forward="true" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="34" />
+          <folding />
         </state>
       </provider>
     </entry>
