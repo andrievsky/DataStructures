@@ -25,7 +25,7 @@ namespace Tests
         [Theory, MemberData("CheckBracketsDataSet")]
         public void TestDataSet(string[] input, string output)
         {
-            Assert.Equal(output, check_brackets.Execute(input));
+            Assert.Equal(output, CheckBrackets.Execute(input));
         }
 
         public static IEnumerable<object[]> CheckBracketsDataSet
