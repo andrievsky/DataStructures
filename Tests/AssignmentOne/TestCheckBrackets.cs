@@ -3,9 +3,9 @@ using AssignmentOne;
 using Tests.Helpers;
 using Xunit;
 
-namespace Tests
+namespace Tests.AssignmentOne
 {
-    public class CheckBracketsTest
+    public class TestCheckBrackets
     {
         [Fact]
         public void TestStack()
