@@ -33,7 +33,7 @@ namespace Tests.Week1
         {
             get
             {
-                var data = new DataSet("Assignments/Week1/Resources/check_brackets_in_code/tests");
+                var data = new DataSet("Assignments/Week1/Resources/check_brackets_in_code/tests", limit: 1);
                 return data.Objects;
             }
         }

@@ -18,7 +18,7 @@ namespace Tests.Week1
         {
             get
             {
-                var data = new DataSet("Assignments/Week1/Resources/tree_height/tests");
+                var data = new DataSet("Assignments/Week1/Resources/tree_height/tests", limit: 1);
                 return data.Objects;
             }
         }
