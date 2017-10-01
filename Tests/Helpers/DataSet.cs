@@ -2,19 +2,20 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using Assignments.Common;
 using Microsoft.DotNet.PlatformAbstractions;
 
 namespace Tests.Helpers
 {
     public class DataSetSource
     {
-        public string[] IntpuData { get; private set; }
+        public DataSource IntpuData { get; private set; }
         public string OutputData { get; private set; }
 
         public DataSetSource(string inputPath, string outputPath)
         {
-            IntpuData = File.ReadAllText(inputPath).Trim().Split(null);
-            OutputData = File.ReadAllText(outputPath).Trim();
+            IntpuData = new FileDataSource(inputPath);
+            OutputData = File.ReadAllText(outputPath);
         }
 
         public object[] ToObject()
@@ -28,7 +29,7 @@ namespace Tests.Helpers
         public IList<DataSetSource> Items { get; private set; } = new List<DataSetSource>();
         public IList<object[]> Objects { get; private set; } = new List<object[]>();
 
-        public DataSet(string folderPath, uint limit = 0)
+        public DataSet(string folderPath, uint limit = 0, int from = 1)
         {
             folderPath = ResolvePath(folderPath);
             var inputFiles = Directory.GetFiles(folderPath, "*", SearchOption.TopDirectoryOnly);
@@ -40,6 +41,11 @@ namespace Tests.Helpers
             {
                 if (!string.IsNullOrEmpty(Path.GetExtension(filePath)))
                 {
+                    continue;
+                }
+                if (from > 1)
+                {
+                    from -= 1;
                     continue;
                 }
                 Items.Add(new DataSetSource(filePath, string.Format("{0}.a", filePath)));

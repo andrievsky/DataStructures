@@ -2,6 +2,6 @@
 {
     public interface IAssignment
     {
-        string Execute(string[] input);
+        string Execute(IDataSource input);
     }
 }

@@ -1,4 +1,5 @@
-﻿using Xunit;
+﻿using Assignments.Week3;
+using Xunit;
 
 namespace Tests.Week3
 {

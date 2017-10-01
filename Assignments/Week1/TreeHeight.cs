@@ -22,15 +22,17 @@ namespace Assignments.Week1
     /// </summary>
     public class TreeHeight : IAssignment
     {
-        public string Execute(string[] args)
+        public string Execute(IDataSource input)
         {
-            var n = int.Parse(args[0]);
+            input.MoveNext();
+            var n = input.Current.NextInt();
+            input.MoveNext();
             var source = new int[n];
             for (var i = 0; i < n; i++)
             {
-                source[i] = int.Parse(args[i + 2]);
+                source[i] = input.Current.NextInt();
             }
-            return ComputeHeight(n, source).ToString();
+            return new DataSource().Add(ComputeHeight(n, source).ToString()).ToString();
         }
 
         private int ComputeHeightNaive(int n, int[] source)

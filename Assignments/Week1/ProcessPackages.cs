@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using Assignments.Common;
 
 namespace Assignments.Week1
@@ -27,6 +26,11 @@ namespace Assignments.Week1
             Dropped = true,
             StartTime = -1
         };
+
+        public override string ToString()
+        {
+            return Dropped ? "-1" : StartTime.ToString();
+        }
     }
 
     internal class Buffer
@@ -104,8 +108,6 @@ namespace Assignments.Week1
     /// </summary>
     public class ProcessPackages : IAssignment
     {
-        private const string NewLine = "\r\n";
-
         private static List<Response> ProcessRequests(IEnumerable<Request> requests, Buffer buffer)
         {
             var responses = new List<Response>();
@@ -118,36 +120,34 @@ namespace Assignments.Week1
 
         private static string FormatResponses(IEnumerable<Response> responses)
         {
-            var res = responses.Select(response =>
+            var res = new DataSource();
+            foreach (var response in responses)
             {
-                if (response.Dropped)
-                {
-                    return -1;
-                }
-                return response.StartTime;
-            });
-            return string.Join(NewLine, res);
+                res.Add(response.ToString());
+            }
+
+            return res.ToString();
         }
 
-        public string Execute(string[] args)
+        public string Execute(IDataSource input)
         {
-            var scanner = new Scanner(args);
-            var bufferMaxSize = scanner.NextInt();
+            input.MoveNext();
+            var bufferMaxSize = input.Current.NextInt();
             var buffer = new Buffer(bufferMaxSize);
-            var requestsCount = scanner.NextInt();
-            scanner.NextLine();
+            var requestsCount = input.Current.NextInt();
             var requests = new List<Request>();
             for (var i = 0; i < requestsCount; i++)
             {
+                input.MoveNext();
                 requests.Add(new Request(
-                    arrivalTime: scanner.NextInt(),
-                    processTime: scanner.NextInt()
+                    arrivalTime: input.Current.NextInt(),
+                    processTime: input.Current.NextInt()
                 ));
-                scanner.NextLine();
             }
 
             var responses = ProcessRequests(requests, buffer);
             return FormatResponses(responses);
         }
+        
     }
 }

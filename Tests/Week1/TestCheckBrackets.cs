@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Assignments.Common;
 using Assignments.Week1;
 using Tests.Helpers;
 using Xunit;
@@ -23,7 +24,7 @@ namespace Tests.Week1
         }
 
         [Theory, MemberData("GetDataSet")]
-        public void TestDataSet(string[] input, string output)
+        public void TestDataSet(DataSource input, string output)
         {
             var assignment = new CheckBrackets();
             Assert.Equal(output, assignment.Execute(input));
@@ -33,11 +34,9 @@ namespace Tests.Week1
         {
             get
             {
-                var data = new DataSet("Assignments/Week1/Resources/check_brackets_in_code/tests", limit: 1);
+                var data = new DataSet("Assignments/Week1/Resources/check_brackets_in_code/tests");
                 return data.Objects;
             }
         }
     }
-    
-
 }

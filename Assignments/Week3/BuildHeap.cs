@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using Assignments.Common;
 
 namespace Assignments.Week3
@@ -27,78 +26,48 @@ namespace Assignments.Week3
     Note that all the elements of the input array are distinct. Note that any sequence of swaps that has
     length at most 4𝑛 and after which your initial array becomes a correct heap will be graded as correct.*/
     /// </summary>
-    public class BuildHeap
+    public class BuildHeap : IAssignment
     {
-    }
-}
-
-public class BuildHeap : IAssignment
-{
-    private int[] data;
-    private IList<Tuple<int, int>> swaps;
-
-    private Scanner input;
-    private TextWriter output;
-
-
-    public string Execute(String[] args)
-    {
-        new BuildHeap().solve();
-        return output.ToString();
-    }
-
-    private void ReadData()
-    {
-        int n = input.NextInt();
-        data = new int[n];
-        for (int i = 0; i < n; ++i)
+        public string Execute(IDataSource input)
         {
-            data[i] = input.NextInt();
-        }
-    }
-
-    private string FormatOutput(IList<Tuple<int, int>> swaps)
-    {
-        var res = new StreamWriter();
-        out.println(swaps.size());
-        for (Swap swap :
-        swaps) {
-            out.println(swap.index1 + " " + swap.index2);
-        }
-    }
-
-    private void generateSwaps()
-    {
-        swaps = new List<Swap>();
-        // The following naive implementation just sorts 
-        // the given sequence using selection sort algorithm
-        // and saves the resulting sequence of swaps.
-        // This turns the given array into a heap, 
-        // but in the worst case gives a quadratic number of swaps.
-        //
-        // TODO: replace by a more efficient implementation
-        for (int i = 0; i < data.length; ++i)
-        {
-            for (int j = i + 1; j < data.length; ++j)
+            var swaps = GenerateSwaps(input);
+            var res = new DataSource();
+            foreach (var swap in swaps)
             {
-                if (data[i] > data[j])
+                res.Add(swap.Item1 + " " + swap.Item2);
+            }
+            return res.ToString();
+        }
+
+        private IList<Tuple<int, int>> GenerateSwaps(IDataSource input)
+        {
+            var swaps = new List<Tuple<int, int>>();
+            // The following naive implementation just sorts 
+            // the given sequence using selection sort algorithm
+            // and saves the resulting sequence of swaps.
+            // This turns the given array into a heap, 
+            // but in the worst case gives a quadratic number of swaps.
+            //
+            // TODO: replace by a more efficient implementation
+            var data = new List<int>();
+            /*while (input.HasNext())
+            {
+                data.Add(input.NextInt());
+            }*/
+            for (int i = 0; i < data.Count; ++i)
+            {
+                for (int j = i + 1; j < data.Count; ++j)
                 {
-                    swaps.add(new Swap(i, j));
-                    int tmp = data[i];
-                    data[i] = data[j];
-                    data[j] = tmp;
+                    if (data[i] > data[j])
+                    {
+                        swaps.Add(Tuple.Create(i, j));
+                        int tmp = data[i];
+                        data[i] = data[j];
+                        data[j] = tmp;
+                    }
                 }
             }
+            return swaps;
         }
-    }
-
-    public void solve()
-    {
-        in = new FastScanner();
-            out = new PrintWriter(new BufferedOutputStream(System.out));
-        readData();
-        generateSwaps();
-        writeResponse();
-            out.close();
     }
 }

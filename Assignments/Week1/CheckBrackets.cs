@@ -61,17 +61,22 @@ namespace Assignments.Week1
     {
         private const string Success = "Success";
 
-        public string Execute(string[] args)
+        public string Execute(IDataSource input)
         {
-            var source = args[0];
-            if (string.IsNullOrEmpty(source))
+            return Format(Process(input));
+        }
+
+        private string Process(IDataSource input)
+        {
+            if (!input.MoveNext())
             {
                 return Success;
             }
+            var line = input.Current.Source;
             var stack = new DsStack<Bracket>();
-            for (var i = 0; i < source.Length; i++)
+            for (var i = 0; i < line.Length; i++)
             {
-                var c = source[i];
+                var c = line[i];
                 if (IsOpenBracket(c))
                 {
                     stack.Push(new Bracket(c, i));
@@ -93,9 +98,14 @@ namespace Assignments.Week1
             return Success;
         }
 
-        private string ResolveErrorPosition(int position)
+        private static string ResolveErrorPosition(int position)
         {
             return (position + 1).ToString();
+        }
+
+        private static string Format(string value)
+        {
+            return new DataSource().Add(value).ToString();
         }
 
         private static bool IsOpenBracket(char c)
@@ -111,7 +121,7 @@ namespace Assignments.Week1
 
     public class DsStack<T>
     {
-        private uint _count = 0;
+        private uint _count;
         private readonly DsLinkedList<T> _state = new DsLinkedList<T>();
 
         public void Push(T key)
