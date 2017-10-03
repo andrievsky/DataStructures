@@ -35,18 +35,26 @@ namespace Assignments.Common
                 return "";
             }
             var builder = new StringBuilder();
-
-            /*for (var i = 0; i < Lines.Count - 1; i += 1)
-            {
-                builder.Append(Lines[i].Source);
-                builder.Append(NewLine);
-            }
-            builder.Append(Lines.Last().Source);*/
-            
             foreach (var line in Lines)
             {
                 builder.Append(line.Source);
                 builder.Append(NewLine);
+            }
+            
+            return builder.ToString();
+        }
+        
+        public string ToString(string newLine)
+        {
+            if (Lines.Count == 0)
+            {
+                return "";
+            }
+            var builder = new StringBuilder();
+            foreach (var line in Lines)
+            {
+                builder.Append(line.Source);
+                builder.Append(newLine);
             }
             
             return builder.ToString();
