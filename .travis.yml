@@ -1,8 +1,7 @@
 language: csharp
-solution: DataStructures.sln
-install:
-  - nuget restore DataStructures.sln
-  - nuget install xunit.runners -Version 1.9.2 -OutputDirectory testrunner
+mono: none
+dotnet: 1.0.3
+dist: trusty
 script:
-  - xbuild /p:Configuration=Release DataStructures.sln
-  - mono ./testrunner/xunit.runners.1.9.2/tools/xunit.console.clr4.exe ./Tests/bin/Release/Tests.dll
+ - dotnet restore
+ - dotnet test Tests/Tests.csproj
