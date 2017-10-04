@@ -5,3 +5,5 @@ dist: trusty
 script:
  - dotnet restore
  - dotnet test Tests/Tests.csproj
+group: stable
+os: macos
