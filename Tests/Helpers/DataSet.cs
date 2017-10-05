@@ -15,7 +15,7 @@ namespace Tests.Helpers
         public DataSetSource(string inputPath, string outputPath)
         {
             IntpuData = new FileDataSource(inputPath);
-            OutputData = File.ReadAllText(outputPath);
+            OutputData = File.ReadAllText(outputPath).Replace("\r\n", "\n");
         }
 
         public object[] ToObject()

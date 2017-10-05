@@ -8,7 +8,7 @@ namespace Assignments.Common
     public class DataSource : IDataSource
     {
         #region Constants
-        public const string NewLine = "\r\n";
+        public const string NewLine = "\n";
         #endregion
         
         #region State
