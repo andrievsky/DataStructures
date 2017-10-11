@@ -32,7 +32,7 @@ namespace Assignments.Week1
             {
                 source[i] = input.Current.NextInt();
             }
-            return new DataSource().Add(ComputeHeight(n, source).ToString()).ToString();
+            return new DataSource().AppendLine(ComputeHeight(n, source).ToString()).ToString();
         }
 
         private int ComputeHeightNaive(int n, int[] source)

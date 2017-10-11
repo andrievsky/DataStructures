@@ -11,7 +11,7 @@ namespace Tests.Week1
         [Fact]
         public void Test18()
         {
-            var input = new DataSource().Add("2 3").Add("0 1").Add("3 1").Add("10 1");
+            var input = new DataSource().AppendLine("2 3").AppendLine("0 1").AppendLine("3 1").AppendLine("10 1");
             var output = $"0{DataSource.NewLine}3{DataSource.NewLine}10{DataSource.NewLine}";
             var assignment = new ProcessPackages();
             Assert.Equal(output, assignment.Execute(input));
@@ -20,7 +20,7 @@ namespace Tests.Week1
         [Fact]
         public void Test17()
         {
-            var input = new DataSource().Add("3 6").Add("0 2").Add("1 2").Add("2 2").Add("3 2").Add("4 2").Add("5 2");
+            var input = new DataSource().AppendLine("3 6").AppendLine("0 2").AppendLine("1 2").AppendLine("2 2").AppendLine("3 2").AppendLine("4 2").AppendLine("5 2");
             var output = $"0{DataSource.NewLine}2{DataSource.NewLine}4{DataSource.NewLine}6{DataSource.NewLine}8{DataSource.NewLine}-1{DataSource.NewLine}";
             var assignment = new ProcessPackages();
             Assert.Equal(output, assignment.Execute(input));

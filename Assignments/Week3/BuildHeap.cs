@@ -32,10 +32,10 @@ namespace Assignments.Week3
         {
             var swaps = GenerateSwaps(input);
             var res = new DataSource();
-            res.Add(swaps.Count.ToString());
+            res.AppendLine(swaps.Count.ToString());
             foreach (var swap in swaps)
             {
-                res.Add(swap.Item1 + " " + swap.Item2);
+                res.AppendLine(swap.Item1 + " " + swap.Item2);
             }
             return res.ToString("\n");
         }

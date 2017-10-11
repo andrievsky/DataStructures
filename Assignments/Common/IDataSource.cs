@@ -5,7 +5,7 @@ namespace Assignments.Common
 {
     public interface IDataSource : IEquatable<IDataSource>, IDisposable
     {
-        IDataSource Add(string lineSource);
+        IDataSource AppendLine(string lineSource);
         DataSourceLine Current { get; }
         bool MoveNext();
         void Reset();

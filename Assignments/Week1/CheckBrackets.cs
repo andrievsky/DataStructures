@@ -105,7 +105,7 @@ namespace Assignments.Week1
 
         private static string Format(string value)
         {
-            return new DataSource().Add(value).ToString();
+            return new DataSource().AppendLine(value).ToString();
         }
 
         private static bool IsOpenBracket(char c)

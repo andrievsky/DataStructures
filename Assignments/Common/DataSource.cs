@@ -22,7 +22,7 @@ namespace Assignments.Common
         /// Add new line
         /// </summary>
         /// <param name="lineSource"></param>
-        public IDataSource Add(string lineSource)
+        public IDataSource AppendLine(string lineSource)
         {
             Lines.Add(new DataSourceLine(lineSource));
             return this;

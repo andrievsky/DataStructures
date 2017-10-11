@@ -12,13 +12,13 @@ namespace Tests.Week3
         public void TestSample1()
         {
             var input = new DataSource();
-            input.Add("5");
-            input.Add("5 4 3 2 1");
+            input.AppendLine("5");
+            input.AppendLine("5 4 3 2 1");
             var output = new DataSource();
-            output.Add("3");
-            output.Add("1 4");
-            output.Add("0 1");
-            output.Add("1 3");
+            output.AppendLine("3");
+            output.AppendLine("1 4");
+            output.AppendLine("0 1");
+            output.AppendLine("1 3");
             var assingment = new BuildHeap();
 
             Assert.Equal(output.ToString("\n"), assingment.Execute(input));

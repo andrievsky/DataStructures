@@ -123,7 +123,7 @@ namespace Assignments.Week1
             var res = new DataSource();
             foreach (var response in responses)
             {
-                res.Add(response.ToString());
+                res.AppendLine(response.ToString());
             }
 
             return res.ToString();
